@@ -4,12 +4,25 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Recettes</h1>
+  <h1 class="page-heading">Tests Perso</h1>
 
-  <!-- Bouton pour tester la page "panda roux" -->
+  <!-- Boutons / liste de tests -->
   <div class="actions">
-    <a class="button" href="{{ '/panda-roux.html' | prepend: site.baseurl }}">Tester « Panda roux »</a>
+    <a class="button" href="{{ '/panda-roux.html' | prepend: site.baseurl }}">Panda Roux</a>
   </div>
+
+  <!-- Section tests (nouvelle) -->
+  <section class="tests">
+    <h2 class="section-heading">Tests</h2>
+    <ul class="test-list">
+      {% for test in site.tests %}
+      <li><a href="{{ test.url | prepend: site.baseurl }}">{{ test.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Recettes -->
+  <h2 class="page-heading">Recettes</h2>
 
   <ul class="post-list">
     {% assign sortedPosts = site.posts | sort: 'title' %}
@@ -21,4 +34,5 @@ layout: default
     </li>
     {% endfor %}
   </ul>
+
 </div>

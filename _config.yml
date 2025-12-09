@@ -17,3 +17,7 @@ github_username:  deicidia
 
 # Build settings
 markdown: kramdown
+
+collections:
+  tests:
+    output: true
