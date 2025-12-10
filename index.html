@@ -7,10 +7,10 @@ layout: default
   <h2 class="page-heading">Posts</h2>
 
   <ul class="post-list">
-    {% assign sortedPosts = site.posts | sort: 'title' %}
+    {% assign sortedPosts = site.posts | sort: 'date' | reverse %}
     {% for post in sortedPosts %}
     <li>
-      <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+      <p class="post-date">{% include date_fr.html date=post.date %}</p>
       <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>

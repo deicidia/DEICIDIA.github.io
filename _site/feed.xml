@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Dec 2025 00:58:46 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Dec 2025 00:58:46 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Dec 2025 01:57:59 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Dec 2025 01:57:59 +0100</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -31,6 +31,79 @@
         <pubDate>Tue, 09 Dec 2025 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/2025/12/09/UAV-&-RL-&-3DGS.html</link>
         <guid isPermaLink="true">http://localhost:4000/2025/12/09/UAV-&-RL-&-3DGS.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Liste de ressources</title>
+        <description>&lt;h2 id=&quot;optimisation--mathématiques&quot;&gt;Optimisation &amp;amp; Mathématiques&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.algorithmica.org/hpc/&quot;&gt;Introduction à l’optimisation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://curiouscoding.nl/posts/&quot;&gt;Blog de Groot Koerkamp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitmath.blogspot.com/&quot;&gt;Blog axé sur l’optimisation SIMD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dlsun.github.io/probability/box-models.html#exm:committee-chair&quot;&gt;Cours de probabilités et de statistiques&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://xlinux.nist.gov/dads/&quot;&gt;Dictionnaire d’algorithmes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;langages-de-programmation&quot;&gt;Langages de programmation&lt;/h2&gt;
+
+&lt;h3 id=&quot;c&quot;&gt;C++&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.learncpp.com/&quot;&gt;Tutoriels complets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://google.github.io/styleguide/cppguide.html&quot;&gt;Guide de style&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;zig&quot;&gt;Zig&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codeberg.org/ziglings/exercises&quot;&gt;Exercices pour apprendre le langage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pedropark99.github.io/zig-book/&quot;&gt;Introduction classique à Zig&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://peps.python.org/pep-0020/&quot;&gt;PEP 20 - The Zen of Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://peps.python.org/pep-0484/&quot;&gt;PEP 484 - Type Hints&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://peps.python.org/pep-0008/&quot;&gt;PEP 8 - Style Guide for Python Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://google.github.io/styleguide/pyguide.html&quot;&gt;Google Python Style Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://peps.python.org/pep-0257/&quot;&gt;PEP 257 - Docstring Conventions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://numpydoc.readthedocs.io/en/latest/format.html&quot;&gt;NumpyDoc&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;outils-et-bonnes-pratiques&quot;&gt;Outils et bonnes pratiques&lt;/h2&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;Conventional Commits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/get-started/quickstart/github-flow&quot;&gt;GitHub Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://trunkbaseddevelopment.com/&quot;&gt;Trunk Based Development&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;GitFlow&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;compiler-explorer&quot;&gt;Compiler Explorer&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://godbolt.org/&quot;&gt;Compiler Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;programmation-gpu&quot;&gt;Programmation GPU&lt;/h2&gt;
+
+&lt;h3 id=&quot;cuda&quot;&gt;CUDA&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jamesakl.com/posts/cuda-ontology/&quot;&gt;CUDA Ontology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://modal.com/gpu-glossary/device-hardware/cuda-device-architecture&quot;&gt;Glossaire CUDA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.aleksagordic.com/blog/matmul&quot;&gt;Optimisation de kernels&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Mon, 08 Dec 2025 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2025/12/08/Ressources.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/12/08/Ressources.html</guid>
         
         
       </item>
