@@ -146,6 +146,8 @@ Le drone disposant de capteurs embarqués précis (IMU, GPS, Odométrie), nous p
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg <span class="nt">-i</span> input_video.mp4 <span class="nt">-vf</span> <span class="nv">fps</span><span class="o">=</span>1 out%d.png
 </code></pre></div></div>
 
+<p>L’utilisation du mode Sequential Matching de COLMAP a considérablement accéléré les calculs, confirmant que l’exploitation de la cohérence temporelle (vidéo vs photos en vrac) est la clé pour notre application.</p>
+
   </div>
 
 </article>

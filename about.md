@@ -4,4 +4,4 @@ title: À-PROPOS
 permalink: /À-PROPOS/
 ---
 
-Blog.
+Un blog éducatif pour canaliser mon éparpillement.
