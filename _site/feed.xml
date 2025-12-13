@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Dec 2025 02:52:47 +0100</pubDate>
-    <lastBuildDate>Sat, 13 Dec 2025 02:52:47 +0100</lastBuildDate>
+    <pubDate>Sat, 13 Dec 2025 03:05:24 +0100</pubDate>
+    <lastBuildDate>Sat, 13 Dec 2025 03:05:24 +0100</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -111,6 +111,19 @@
   &lt;li&gt;&lt;a href=&quot;https://bitmath.blogspot.com/&quot;&gt;Blog axé sur l’optimisation SIMD&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://dlsun.github.io/probability/box-models.html#exm:committee-chair&quot;&gt;Cours de probabilités et de statistiques&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://xlinux.nist.gov/dads/&quot;&gt;Dictionnaire d’algorithmes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.aleksagordic.com/blog/matmul&quot;&gt;Optimisation d’un kernel CUDA (matmul)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;competitive-programming&quot;&gt;Competitive Programming&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cpbook.net/details?cp=1&quot;&gt;Competitive Programming Book (CP Book)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://usaco.guide/CPH.pdf&quot;&gt;Competitive Programming Handbook (CPH)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf&quot;&gt;Algorithms (Jeff Erickson)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cp-algorithms.com/&quot;&gt;CP-Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tryalgo.org/&quot;&gt;TryAlgo (site français)&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
