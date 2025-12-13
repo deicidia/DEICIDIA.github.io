@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Dec 2025 02:50:45 +0100</pubDate>
-    <lastBuildDate>Sat, 13 Dec 2025 02:50:45 +0100</lastBuildDate>
+    <pubDate>Sat, 13 Dec 2025 02:52:47 +0100</pubDate>
+    <lastBuildDate>Sat, 13 Dec 2025 02:52:47 +0100</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -70,7 +70,7 @@
 
 &lt;p&gt;L’utilisation du mode Sequential Matching de COLMAP a considérablement accéléré les calculs, confirmant que l’exploitation de la cohérence temporelle (vidéo vs photos en vrac) est la clé pour notre application. J’ai aussi fait un scan de mon chat, c’est cadeau &lt;a href=&quot;/scans/zigoto.html&quot;&gt;&lt;strong&gt;voir le scan&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Un problème notable est le fait que l’optique du XT2 n’est pas stabilisée, ce qui entraine des images de moins bonne qualité (flou de bougé). De plus le 23mm (équivalent ~35mm plein format) est en limite basse des recommandations habituelles pour la photogrammétrie d’objets (&lt;a href=&quot;https://developer.playcanvas.com/user-manual/gaussian-splatting/creating/taking-photos/#:~:text=35%2D85mm%20equivalent%20focal%20length&quot;&gt;PlayCanvas&lt;/a&gt; conseille 35-85mm eq.), bien qu’acceptable pour des scènes. Une focale plus longue et une ouverture entre f/8 et f/11 assureraient une meilleure netteté uniforme.&lt;/p&gt;
+&lt;p&gt;Un problème notable est le fait que l’optique du XT2 n’est pas stabilisée, ce qui entraine des images de moins bonne qualité (flou de bougé). De plus le 23mm (équivalent ~35mm plein format) est en limite basse des recommandations habituelles pour la photogrammétrie d’objets (&lt;a href=&quot;https://developer.playcanvas.com/user-manual/gaussian-splatting/creating/taking-photos/#:~:text=35%2D85mm%20equivalent%20focal%20length&quot;&gt;&lt;strong&gt;PlayCanvas&lt;/strong&gt;&lt;/a&gt; conseille 35-85mm eq.), bien qu’acceptable pour des scènes. Une focale plus longue et une ouverture entre f/8 et f/11 assureraient une meilleure netteté uniforme.&lt;/p&gt;
 
 &lt;hr /&gt;
 
