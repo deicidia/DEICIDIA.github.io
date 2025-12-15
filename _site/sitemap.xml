@@ -18,6 +18,9 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/workout/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/scans/fuji.html</loc>
 <lastmod>2025-12-11T14:28:34+01:00</lastmod>
 </url>
