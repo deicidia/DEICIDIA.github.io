@@ -297,7 +297,7 @@
     // 2. Split Data
     const splitProgram = {
       day1: {
-        title: "Jour 1: Pectoraux, Épaules & Triceps",
+        title: "PUSH",
         time: "55 Min",
         desc: "Séance de poussée (Push). Gros volume sur l'avant du corps.",
         chart: [2, 0, 9, 2, 8, 7], // Legs, Back, Chest, Abs, Shoulders, Arms
@@ -312,7 +312,7 @@
         ]
       },
       day2: {
-        title: "Jour 2: Dos & Biceps",
+        title: "PULL",
         time: "50 Min",
         desc: "Séance de tirage (Pull). Largeur et épaisseur.",
         chart: [0, 10, 0, 0, 2, 8],
@@ -326,7 +326,7 @@
         ]
       },
       day3: {
-        title: "Jour 3: Jambes (Leg Day)",
+        title: "LEG",
         time: "1H05",
         desc: "Séance complète bas du corps. Intensité maximale.",
         chart: [10, 1, 0, 1, 0, 0],
@@ -341,7 +341,7 @@
         ]
       },
       day4: {
-        title: "Jour 4: Rappel Haut du Corps",
+        title: "HIT",
         time: "45 Min",
         desc: "Volume supplémentaire pour le haut du corps.",
         chart: [2, 7, 7, 2, 6, 6],
@@ -424,10 +424,10 @@
 
     function renderSplitNav() {
       const days = [
-        { id: 'day1', label: 'J1: Pecs/Épaules' },
-        { id: 'day2', label: 'J2: Dos/Biceps' },
-        { id: 'day3', label: 'J3: Jambes' },
-        { id: 'day4', label: 'J4: Haut Corps' }
+        { id: 'day1', label: 'PUSH' },
+        { id: 'day2', label: 'PULL' },
+        { id: 'day3', label: 'LEG' },
+        { id: 'day4', label: 'HIT' }
       ];
 
       const html = days.map(d => `
