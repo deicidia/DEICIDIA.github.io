@@ -27,3 +27,8 @@ plugins:
 collections:
   scans:
     output: true
+
+# SASS configuration
+sass:
+  sass_dir: _sass
+  style: compressed

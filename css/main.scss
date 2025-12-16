@@ -3,32 +3,32 @@
 ---
 @charset "utf-8";
 
+// Import Velocity theme variables first
+@import "velocity-variables";
 
-
-// Our variables
+// Legacy variables for backwards compatibility
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-weight: $font-normal;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: $line-height-normal;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// Use Velocity colors
+$text-color:       $light-base-90;
+$background-color: $light-base-05;
+$brand-color:      $light-accent;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:       $light-base-60;
+$grey-color-light: $light-base-30;
+$grey-color-dark:  $light-base-80;
 
 // Width of the content area
 $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -42,8 +42,6 @@ $on-laptop:        800px;
         @content;
     }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

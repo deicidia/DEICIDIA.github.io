@@ -4,10 +4,10 @@
     <title>Nathan Thoumine</title>
     <description>Blog personnel de Nathan Thoumine. Ingénieur IA Embarquée &amp; Robotique.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Dec 2025 23:32:51 +0100</pubDate>
-    <lastBuildDate>Mon, 15 Dec 2025 23:32:51 +0100</lastBuildDate>
+    <link>https://deicidia.github.io/</link>
+    <atom:link href="https://deicidia.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 16 Dec 2025 01:23:16 +0100</pubDate>
+    <lastBuildDate>Tue, 16 Dec 2025 01:23:16 +0100</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -101,8 +101,8 @@
 
 </description>
         <pubDate>Tue, 09 Dec 2025 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2025/12/09/UAV-&-RL-&-3DGS.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/12/09/UAV-&-RL-&-3DGS.html</guid>
+        <link>https://deicidia.github.io/2025/12/09/UAV-&-RL-&-3DGS.html</link>
+        <guid isPermaLink="true">https://deicidia.github.io/2025/12/09/UAV-&-RL-&-3DGS.html</guid>
         
         
       </item>
@@ -186,8 +186,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Mon, 08 Dec 2025 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2025/12/08/Ressources.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/12/08/Ressources.html</guid>
+        <link>https://deicidia.github.io/2025/12/08/Ressources.html</link>
+        <guid isPermaLink="true">https://deicidia.github.io/2025/12/08/Ressources.html</guid>
         
         
       </item>

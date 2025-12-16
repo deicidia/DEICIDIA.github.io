@@ -39,15 +39,17 @@ pre.mermaid {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: var(--text-normal);
+    background-color: var(--background-primary);
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 
 
@@ -123,8 +125,39 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: $base-font-weight;
+    color: var(--text-normal);
 }
+
+h1 {
+    font-weight: $h1-weight;
+    font-size: $h1-size;
+}
+
+h2 {
+    font-weight: $h2-weight;
+    font-size: $h2-size;
+}
+
+h3 {
+    font-weight: $h3-weight;
+    font-size: $h3-size;
+}
+
+h4 {
+    font-weight: $h4-weight;
+    font-size: $h4-size;
+}
+
+h5 {
+    font-weight: $h5-weight;
+    font-size: $h5-size;
+}
+
+h6 {
+    font-weight: $h6-weight;
+    font-size: $h6-size;
+}
+
 
 
 
@@ -132,18 +165,21 @@ h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: var(--link-color);
     text-decoration: none;
+    transition: color $anim-duration-fast $anim-motion-swing;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: var(--link-color);
+        opacity: 0.85;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: var(--link-color-hover);
+        text-decoration: none;
     }
 }
+
 
 
 
@@ -151,11 +187,14 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--color-accent);
+    background-color: var(--code-background);
+    padding: $spacing-s $spacing-m;
+    margin: $spacing-m 0;
+    border-radius: $radius-s;
+    font-size: 1em;
+    letter-spacing: 0;
     font-style: italic;
 
     > :last-child {
@@ -165,31 +204,37 @@ blockquote {
 
 
 
+
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    font-size: 0.9em;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    border: 1px solid var(--code-border);
+    border-radius: $radius-s;
+    background-color: var(--code-background);
 }
 
 code {
-    padding: 1px 5px;
+    padding: 2px 6px;
 }
 
 pre {
-    padding: 8px 12px;
+    padding: $spacing-m;
     overflow-x: auto;
+    box-shadow: var(--shadow-code);
+    line-height: 1.5;
 
     >code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+        background-color: transparent;
     }
 }
+
 
 
 
