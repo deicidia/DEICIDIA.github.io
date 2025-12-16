@@ -57,6 +57,22 @@ permalink: /workout/
     }
 
     /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+
     @keyframes pulse-ring {
       0% {
         transform: scale(0.95);
@@ -98,30 +114,28 @@ permalink: /workout/
     /* Dark Mode Overrides for Custom Classes */
     .dark .program-selector-btn.inactive {
       background-color: #334155;
-      /* Slate-700 */
       color: #cbd5e1;
-      /* Slate-300 */
       border-color: #475569;
-      /* Slate-600 */
     }
 
     .dark .program-selector-btn.inactive:hover {
       background-color: #334155;
     }
 
-    /* Checkbox styling override */
     .custom-checkbox:checked {
       background-color: #2563eb;
       border-color: #2563eb;
     }
+
+    /* Guide Card Hover Effect */
+    .guide-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-2px);
+    }
   </style>
-  <!-- Application Structure Plan:
-         1. Global Header: Program Selector (Full Body vs Split).
-         2. Context Manager: JS Logic switches data sources and rendering functions based on selection.
-         3. Dynamic Content Area: Renders either the "Single Page Full Body" flow or the "4-Day Tabbed" flow.
-         4. Unified Footer: Global Timer and Progress bar working for both modes.
-    -->
-  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 pb-32 transition-colors duration-300">
@@ -148,14 +162,19 @@ permalink: /workout/
         </div>
 
         <!-- Main Program Switcher -->
-        <div class="flex bg-slate-100 dark:bg-slate-700 p-1 rounded-xl w-full md:w-auto transition-colors">
+        <div
+          class="flex bg-slate-100 dark:bg-slate-700 p-1 rounded-xl w-full md:w-auto transition-colors overflow-x-auto">
           <button onclick="switchProgram('fullbody')" id="btn-prog-fullbody"
-            class="program-selector-btn active flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-sm">
+            class="program-selector-btn active flex-1 md:flex-none px-4 py-2 rounded-lg text-sm font-bold transition-all shadow-sm whitespace-nowrap">
             Full Body
           </button>
           <button onclick="switchProgram('split')" id="btn-prog-split"
-            class="program-selector-btn inactive flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold transition-all">
+            class="program-selector-btn inactive flex-1 md:flex-none px-4 py-2 rounded-lg text-sm font-bold transition-all whitespace-nowrap mx-1">
             Split
+          </button>
+          <button onclick="switchProgram('guide')" id="btn-prog-guide"
+            class="program-selector-btn inactive flex-1 md:flex-none px-4 py-2 rounded-lg text-sm font-bold transition-all whitespace-nowrap text-emerald-600 dark:text-emerald-400">
+            🎓 Guide
           </button>
         </div>
       </div>
@@ -169,6 +188,126 @@ permalink: /workout/
 
   <!-- MAIN CONTENT AREA -->
   <main class="max-w-5xl mx-auto px-4 py-6 space-y-8 animate-fade-in">
+
+    <!-- GUIDE SECTION (New) -->
+    <section id="guide-section" class="hidden space-y-8">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-2">Les Piliers de la Progression</h2>
+        <p class="text-slate-500 dark:text-slate-400">L'entraînement n'est que le stimulus. La croissance se produit
+          grâce à ce que vous faites les 23 autres heures.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Nutrition -->
+        <div
+          class="guide-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-slate-900 dark:text-white">
+            <span class="text-6xl">🥩</span>
+          </div>
+          <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+            <span class="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg text-lg">📊</span> Macro-Nutrition
+          </h3>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex gap-3">
+              <span class="font-bold text-slate-800 dark:text-slate-100 min-w-[80px]">Protéines</span>
+              <div>
+                <span class="block font-semibold text-blue-600 dark:text-blue-400">1.6g à 2.0g par kg</span>
+                <span class="text-xs opacity-80">Essentiel pour la reconstruction. Ex: 80kg = ~150g/jour.</span>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold text-slate-800 dark:text-slate-100 min-w-[80px]">Lipides</span>
+              <div>
+                <span class="block font-semibold text-orange-500 dark:text-orange-400">~1g par kg</span>
+                <span class="text-xs opacity-80">Vital pour les hormones. Avocats, Oléagineux, Oeufs.</span>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold text-slate-800 dark:text-slate-100 min-w-[80px]">Glucides</span>
+              <div>
+                <span class="block font-semibold text-emerald-500 dark:text-emerald-400">Le reste</span>
+                <span class="text-xs opacity-80">Votre carburant. Moduler selon l'activité du jour.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pre-Workout -->
+        <div
+          class="guide-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-slate-900 dark:text-white">
+            <span class="text-6xl">⚡</span>
+          </div>
+          <h3 class="text-xl font-bold text-orange-500 dark:text-orange-400 mb-4 flex items-center gap-2">
+            <span class="bg-orange-100 dark:bg-orange-900 p-2 rounded-lg text-lg">🍌</span> Pre-Workout
+          </h3>
+          <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+            <div
+              class="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg border border-orange-100 dark:border-orange-800/30">
+              <strong class="block text-orange-700 dark:text-orange-300 mb-1">Repas Solide (2h-3h avant)</strong>
+              <p class="text-xs opacity-90">Glucides complexes + Protéines.<br>Ex: Riz + Poulet ou Avoine + Oeufs.</p>
+            </div>
+            <div
+              class="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg border border-yellow-100 dark:border-yellow-800/30">
+              <strong class="block text-yellow-700 dark:text-yellow-300 mb-1">Snack (30min avant)</strong>
+              <p class="text-xs opacity-90">Glucides rapides, peu de gras.<br>Ex: Banane, Fruit, Isolat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sommeil -->
+        <div
+          class="guide-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-slate-900 dark:text-white">
+            <span class="text-6xl">💤</span>
+          </div>
+          <h3 class="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center gap-2">
+            <span class="bg-indigo-100 dark:bg-indigo-900 p-2 rounded-lg text-lg">🌙</span> Sommeil
+          </h3>
+          <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <p class="font-medium">C'est en dormant que le muscle grossit.</p>
+            <ul class="list-disc list-inside space-y-2 opacity-90">
+              <li><strong>7h à 9h</strong> par nuit minimum.</li>
+              <li>Chambre fraîche (19°C) et noire totale.</li>
+              <li>Évitez les écrans 30min avant de dormir.</li>
+              <li>La régularité des horaires est clé.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Steps/NEAT -->
+        <div
+          class="guide-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-slate-900 dark:text-white">
+            <span class="text-6xl">👟</span>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
+            <span class="bg-emerald-100 dark:bg-emerald-900 p-2 rounded-lg text-lg">🚶</span> Activité (NEAT)
+          </h3>
+          <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <p class="text-xs leading-relaxed opacity-90">
+              Le NEAT (calories brûlées hors sport) est souvent supérieur à la dépense de la séance !
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-2">
+              <div class="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <span class="block text-2xl font-bold text-slate-800 dark:text-white">8-10k</span>
+                <span class="text-xs uppercase font-bold text-slate-400">Pas / Jour</span>
+              </div>
+              <div class="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <span class="block text-2xl font-bold text-emerald-600 dark:text-emerald-400">~300</span>
+                <span class="text-xs uppercase font-bold text-slate-400">Kcal bonus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- DASHBOARD SECTION (Charts & Info) -->
     <section id="dashboard-section" class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -188,16 +327,19 @@ permalink: /workout/
         <p id="view-desc" class="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">Description...</p>
 
         <!-- Warmup Toggle (Visible only for Split) -->
-        <div id="warmup-accordion" class="hidden bg-orange-50 border border-orange-100 rounded-xl overflow-hidden mt-4">
-          <div class="p-3 cursor-pointer flex justify-between items-center hover:bg-orange-100 transition-colors"
+        <div id="warmup-accordion"
+          class="hidden bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-800/30 rounded-xl overflow-hidden mt-4">
+          <div
+            class="p-3 cursor-pointer flex justify-between items-center hover:bg-orange-100 dark:hover:bg-orange-900/40 transition-colors"
             onclick="toggleElement('warmup-content')">
             <div class="flex items-center gap-2">
-              <span class="text-orange-600 font-bold">🔥 Échauffement Requis</span>
+              <span class="text-orange-600 dark:text-orange-400 font-bold">🔥 Échauffement Requis</span>
             </div>
             <span class="text-orange-400 text-xs font-bold">VOIR ▼</span>
           </div>
-          <div id="warmup-content" class="px-4 pb-4 hidden border-t border-orange-100 pt-2">
-            <ul id="warmup-list-split" class="list-disc list-inside text-sm text-orange-800 space-y-1"></ul>
+          <div id="warmup-content" class="px-4 pb-4 hidden border-t border-orange-100 dark:border-orange-800/30 pt-2">
+            <ul id="warmup-list-split"
+              class="list-disc list-inside text-sm text-orange-800 dark:text-orange-300 space-y-1"></ul>
           </div>
         </div>
       </div>
@@ -258,9 +400,9 @@ permalink: /workout/
       </div>
 
       <!-- Abs Section (Split Only) -->
-      <div id="abs-injector" class="hidden pt-6 border-t border-slate-200">
+      <div id="abs-injector" class="hidden pt-6 border-t border-slate-200 dark:border-slate-700">
         <button onclick="toggleAbs()" id="btn-toggle-abs"
-          class="w-full py-4 border-2 border-dashed border-slate-300 rounded-xl text-slate-500 font-bold hover:border-blue-400 hover:text-blue-500 transition-all flex items-center justify-center gap-2">
+          class="w-full py-4 border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl text-slate-500 dark:text-slate-400 font-bold hover:border-blue-400 hover:text-blue-500 transition-all flex items-center justify-center gap-2">
           <span>+</span> Ajouter Circuit Abdos (Optionnel)
         </button>
         <div id="abs-content" class="hidden space-y-4 mt-4">
@@ -277,7 +419,7 @@ permalink: /workout/
   </main>
 
   <!-- UNIFIED FOOTER (Timer & Progress) -->
-  <div
+  <div id="footer-controls"
     class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 shadow-[0_-5px_15px_-5px_rgba(0,0,0,0.1)] p-4 z-50 transition-colors">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row gap-4 justify-between items-center">
 
@@ -412,7 +554,7 @@ permalink: /workout/
 
     // --- STATE ---
     let state = {
-      program: 'fullbody', // 'fullbody' or 'split'
+      program: 'fullbody', // 'fullbody', 'split', 'guide'
       splitDay: 'day1',    // 'day1', 'day2', 'day3', 'day4'
       absEnabled: false,
       totalSets: 0,
@@ -468,40 +610,68 @@ permalink: /workout/
       state.absEnabled = false; // Reset abs
       state.setsDone = 0; // Reset progress visual (simple version)
 
-      // UI Toggle
+      // UI Buttons Logic
       const btnFB = document.getElementById('btn-prog-fullbody');
       const btnSP = document.getElementById('btn-prog-split');
+      const btnGuide = document.getElementById('btn-prog-guide');
+
       const subNav = document.getElementById('sub-nav-container');
+      const guideSection = document.getElementById('guide-section');
+      const dashboard = document.getElementById('dashboard-section');
+      const workoutContainer = document.getElementById('workout-container');
+      const footerControls = document.getElementById('footer-controls');
 
-      if (progType === 'fullbody') {
-        btnFB.classList.replace('inactive', 'active');
-        btnSP.classList.replace('active', 'inactive');
+      // Reset all buttons to inactive first
+      [btnFB, btnSP, btnGuide].forEach(btn => {
+        btn.classList.replace('active', 'inactive');
+      });
+
+      if (progType === 'guide') {
+        // GUIDE MODE
+        btnGuide.classList.replace('inactive', 'active');
+
+        // Visibility
+        guideSection.classList.remove('hidden');
+        dashboard.classList.add('hidden');
+        workoutContainer.classList.add('hidden');
         subNav.classList.add('hidden');
-
-        renderView(fullBodyData);
-
-        // Specific Full Body UI elements
-        document.getElementById('fullbody-warmup-section').classList.remove('hidden');
-        document.getElementById('fullbody-cooldown').classList.remove('hidden');
-        document.getElementById('warmup-accordion').classList.add('hidden'); // Split specific
-        document.getElementById('abs-injector').classList.add('hidden'); // Split specific
-        document.getElementById('main-exercise-header').classList.remove('hidden');
+        footerControls.classList.add('hidden'); // Optional: hide timer in guide mode
 
       } else {
-        // SPLIT
-        btnSP.classList.replace('inactive', 'active');
-        btnFB.classList.replace('active', 'inactive');
-        subNav.classList.remove('hidden');
+        // WORKOUT MODES (Full Body or Split)
+        guideSection.classList.add('hidden');
+        dashboard.classList.remove('hidden');
+        workoutContainer.classList.remove('hidden');
+        footerControls.classList.remove('hidden');
 
-        renderSplitNav();
-        loadSplitDay(state.splitDay);
+        if (progType === 'fullbody') {
+          btnFB.classList.replace('inactive', 'active');
+          subNav.classList.add('hidden');
 
-        // Specific Split UI elements
-        document.getElementById('fullbody-warmup-section').classList.add('hidden');
-        document.getElementById('fullbody-cooldown').classList.add('hidden');
-        document.getElementById('warmup-accordion').classList.remove('hidden');
-        document.getElementById('abs-injector').classList.remove('hidden');
-        document.getElementById('main-exercise-header').classList.add('hidden'); // No separate header needed in split layout
+          renderView(fullBodyData);
+
+          // Specific Full Body UI elements
+          document.getElementById('fullbody-warmup-section').classList.remove('hidden');
+          document.getElementById('fullbody-cooldown').classList.remove('hidden');
+          document.getElementById('warmup-accordion').classList.add('hidden');
+          document.getElementById('abs-injector').classList.add('hidden');
+          document.getElementById('main-exercise-header').classList.remove('hidden');
+
+        } else {
+          // SPLIT
+          btnSP.classList.replace('inactive', 'active');
+          subNav.classList.remove('hidden');
+
+          renderSplitNav();
+          loadSplitDay(state.splitDay);
+
+          // Specific Split UI elements
+          document.getElementById('fullbody-warmup-section').classList.add('hidden');
+          document.getElementById('fullbody-cooldown').classList.add('hidden');
+          document.getElementById('warmup-accordion').classList.remove('hidden');
+          document.getElementById('abs-injector').classList.remove('hidden');
+          document.getElementById('main-exercise-header').classList.add('hidden');
+        }
       }
     }
 
