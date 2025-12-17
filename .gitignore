@@ -2,3 +2,10 @@ _site/
 .jekyll-cache/
 /.bundle/
 vendor/
+/.sass-cache/
+*.css.map
+.vscode/
+.idea/
+.DS_Store
+/.sass-cache
+/.jekyll-metadata
