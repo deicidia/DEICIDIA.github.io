@@ -241,6 +241,8 @@ pre {
 /**
  * Tables
  */
+.page-content table,
+.post-content table,
 table {
     width: 100%;
     margin-bottom: $spacing-unit;
@@ -268,10 +270,11 @@ table {
     th {
         background-color: var(--background-secondary);
         color: var(--text-normal);
-        font-weight: $font-semibold;
+        font-weight: $font-bold;
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 0.85em;
         letter-spacing: 0.05em;
+        border-bottom: 2px solid var(--border-color);
     }
 
     tr:last-child {
@@ -282,7 +285,7 @@ table {
 
     // Zebra striping
     tbody tr:nth-child(even) {
-        background-color: rgba(0, 0, 0, 0.015);
+        background-color: rgba(0, 0, 0, 0.02);
     }
 
     // Hover effect
